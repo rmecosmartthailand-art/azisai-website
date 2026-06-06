@@ -52,4 +52,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     titleTargets.forEach(target => titleObserver.observe(target));
+
+    // パララックス効果（Hero）
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const scrollPercent = Math.min(scrollY / window.innerHeight, 1);
+            if (scrollPercent < 1) {
+                heroContent.style.transform = `translateY(${scrollY * 0.5}px)`;
+            }
+        }, { passive: true });
+    }
 });
