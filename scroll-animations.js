@@ -52,4 +52,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     titleTargets.forEach(target => titleObserver.observe(target));
+
+    // Hero 動画ロード最適化
+    const heroVideo = document.querySelector('.hero-video');
+    if (heroVideo) {
+        // 動画がメタデータをロードしたら、フェードイン準備
+        heroVideo.addEventListener('loadedmetadata', () => {
+            heroVideo.style.opacity = '1';
+        }, { once: true });
+
+        // フォールバック：3秒後に opacity を確保（遅い通信環境対応）
+        setTimeout(() => {
+            heroVideo.style.opacity = '1';
+        }, 3000);
+
+        // 初期状態
+        heroVideo.style.opacity = '0.9';
+    }
 });
