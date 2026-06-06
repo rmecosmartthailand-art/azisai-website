@@ -1,0 +1,14 @@
+# Robots.txt for Azisai Company Website
+# ========================================
+# このファイルはGoogleなどの検索エンジンクローラーの動作を制御します
+
+# すべてのエージェントに対するルール
+User-agent: *
+Allow: /
+
+# サイトマップの位置を指定
+Sitemap: https://azisai-company.com/sitemap.xml
+
+# クロール遅延の設定（Googleボットに対して）
+# User-agent: Googlebot
+# Crawl-delay: 1
