@@ -83,14 +83,6 @@ body {
     }
 }
 
-@keyframes kenBurnsZoom {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.05);
-    }
-}
 
 .fade-in-on-scroll {
     opacity: 0;
@@ -245,7 +237,7 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    padding: 0 50px 160px 80px;
+    padding: 0 60px 180px 100px;
     position: relative;
     overflow: hidden;
 }
@@ -260,7 +252,6 @@ body {
     background-image: url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=2000&h=1400&fit=crop');
     background-size: cover;
     background-position: center;
-    animation: kenBurnsZoom 12s ease-out forwards;
     z-index: -1;
 }
 
@@ -277,14 +268,14 @@ body {
     letter-spacing: 3px;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.65);
-    margin-bottom: 32px;
+    margin-bottom: 45px;
     font-weight: 600;
 }
 
 .hero-title {
     font-size: 3.4rem;
     font-weight: 700;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
     line-height: 1.45;
     letter-spacing: -0.5px;
     word-spacing: 0.2em;
@@ -433,7 +424,7 @@ section {
 }
 
 .section-title {
-    font-size: 2.95rem;
+    font-size: 2.4rem;
     font-weight: 700;
     color: var(--color-navy);
     margin-bottom: 15px;
@@ -800,7 +791,7 @@ section {
 .info-blocks {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 42px 65px;
+    gap: 50px 70px;
 }
 
 .info-block {
@@ -809,7 +800,7 @@ section {
 }
 
 .info-label {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     color: var(--color-gray-dark);
     font-weight: 700;
     text-transform: uppercase;
@@ -818,11 +809,11 @@ section {
 }
 
 .info-value {
-    font-size: 1.0rem;
+    font-size: 0.92rem;
     font-weight: 700;
     color: var(--color-navy);
     margin-bottom: 0;
-    line-height: 1.52;
+    line-height: 1.60;
     letter-spacing: -0.1px;
 }
 
@@ -943,10 +934,11 @@ section {
 .location-map {
     width: 100%;
     aspect-ratio: 16 / 9;
-    margin: 40px 0 30px;
-    border-radius: 3px;
+    max-width: 700px;
+    margin: 50px auto;
+    border-radius: 4px;
+    box-shadow: 0 12px 48px rgba(31, 58, 112, 0.12);
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(31, 58, 112, 0.08);
 }
 
 .location-map iframe {
@@ -962,22 +954,22 @@ section {
 
 .google-map-button {
     display: inline-block;
-    padding: 14px 32px;
+    padding: 16px 36px;
     background-color: var(--color-navy);
     color: var(--color-white);
-    text-decoration: none;
-    border-radius: 2px;
-    font-size: 0.95rem;
+    border: none;
+    border-radius: 3px;
+    font-size: 0.96rem;
     font-weight: 600;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 24px rgba(31, 58, 112, 0.12);
+    cursor: pointer;
 }
 
 .google-map-button:hover {
-    background-color: #142851;
-    box-shadow: 0 12px 32px rgba(31, 58, 112, 0.18);
-    transform: translateY(-2px);
+    background-color: #0f2a52;
+    box-shadow: 0 16px 56px rgba(31, 58, 112, 0.20);
+    transform: translateY(-3px);
 }
 
 @media (max-width: 1024px) {
